@@ -16,7 +16,7 @@ export default function Footer() {
 
     return (
         <div>
-            <footer style={{ position: 'relative', height: '80px', backgroundColor: '#f9f9f9' }}>
+            <footer style={{ position: 'relative', height: '80px', backgroundColor: '#1B1E1F' }}>
 
                 <div id="webring-wrapper" style={{
                     position: 'absolute',
@@ -30,40 +30,32 @@ export default function Footer() {
                     <a href="https://webring.hackclub.com/" id="previousBtn" class="webring-anchor" title="Previous">‹</a>
                     <a href="https://webring.hackclub.com/" class="webring-logo" title="Hack Club Webring" alt="Hack Club Webring"></a>
                     <a href="https://webring.hackclub.com/" id="nextBtn" class="webring-anchor" title="Next">›</a>
-                   
-                </div>
-
-
-                <div
-                    style={{
-                        position: 'absolute',
-                        left: '56%',
-                        top: '50%',
-                        transform: 'translate(-50%, -50%)',
-                    }}
-                >
-                    <a style={{ color: 'inherit' }}
-                        href="https://github.com/thepangel">
-                        <GitHubIcon fontSize="large" style={{ padding: '1rem' }} />
-                    </a>
-
 
                 </div>
-                <div
+
+
+                <a
                     style={{
-                        position: 'absolute',
-                        left: '50%',
-                        top: '50%',
-                        transform: 'translate(-50%, -50%)',
+                        display: 'inline-flex',
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        alignSelf: 'center',
+                        textDecoration: 'none',
                     }}
+                    href="https://github.com/thepangel"
+                    
                 >
-                    <a
-                        href="https://github.com/thepangel"
-                        style={{ color: 'inherit' }}
-                    >
+                    
+                    <GitHubIcon fontSize="large" style={{ padding: '1rem', color: '#ffffff', order: 2 }} />
+                    
+
+
+
+                    <p style={{ color: '#ffffff', order: 1 }} >
                         "Code on GitHub!!"
-                    </a>
-                </div>
+                    </p>
+                </a>
                 <div
                     style={{
                         position: 'absolute',
@@ -74,13 +66,13 @@ export default function Footer() {
 
                     }}
                 >
-                    <a
+                    <p
 
-                        style={{ width: '323px', color: 'inherit' }}
+                        style={{ display: 'inline-block', color: '#ffffff' }}
                     >
                         char *ThePangel = Ángel.Fuentes.Fernández();<br></br>
                         printf("By %s \n", ThePangel)
-                    </a>
+                    </p>
                 </div>
             </footer>
 

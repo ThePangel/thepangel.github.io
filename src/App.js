@@ -40,7 +40,7 @@ function App() {
         <br></br> 
         <span>I like to <span style={{ color: 'rgba(0, 78, 187, 0.89)' }}>
         <Typewriter
-          words={['Code', 'Build', 'Design', 'Engineer', 'Invent', 'Fix', 'Create']}
+          words={['Code', 'Build', 'Design', 'Engineer', 'Invent', 'Fix', 'Create', 'Help', 'Compete', 'Learn']}
           loop={true}
           cursor
           cursorStyle='|'

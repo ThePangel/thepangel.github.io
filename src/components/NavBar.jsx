@@ -10,30 +10,30 @@ function handleClick(event) {
 
 export default function BasicBreadcrumbs() {
   return (
-    <div style={{ backgroundColor: '#343434', width: '100vw' }}>
+    <div style={{ backgroundColor: '#272A2C', width: '100vw' }}>
 
       <div style={{ padding: '1rem', textAlign: 'left' }} >
-        <h2> Ángel Fuentes Fernández </h2>
+        <h2 style={{color: '#ffffff'}}> Ángel Fuentes Fernández </h2>
       </div>
 
 
-      <div role="presentation" onClick={handleClick} style={{position: 'absolute', top: '43%', left: "20%" }}>
-        <Breadcrumbs aria-label="breadcrumb">
-          <Link underline="hover" color="inherit" href="#home">
+      <div role="presentation" onClick={handleClick} style={{position: 'absolute', top: '43%', left: "20%", color: '#ffffff' }}>
+        <Breadcrumbs aria-label="breadcrumb" style={{color: '#ffffff'}}>
+          <Link underline="hover" color= '#ffffff' href="#home">
             Home
           </Link>
           <Link
             underline="hover"
-            color="inherit"
+            color= '#ffffff'
             href="/material-ui/getting-started/installation/"
           >
             Core
           </Link>
-          <Typography sx={{ color: 'text.primary' }}>Breadcrumbs</Typography>
+          <Typography sx={{ color:'#ffffff' }}>Breadcrumbs</Typography>
         </Breadcrumbs>
       </div>
       <div style={{ position: 'absolute', left: "85%", top: '25%'}}>
-        <p style={{ }}>⚠️ Very WIP website!!! ⚠️</p>
+        <p style={{ color: '#ffffff' }}>⚠️ Very WIP website!!! ⚠️</p>
       </div>
 
 
