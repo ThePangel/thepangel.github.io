@@ -10,12 +10,15 @@ function handleClick(event) {
 
 export default function BasicBreadcrumbs() {
   return (
-    <div style={{ display: "table", backgroundColor: '#f9f9f9',  width: '100vw', zIndex: 9999}}>
-      <div style={{ display: "table-cell", padding: '5x', width:'400px'}} >
+    <div style={{ backgroundColor: '#343434', width: '100vw' }}>
+
+      <div style={{ padding: '1rem', textAlign: 'left' }} >
         <h2> Ángel Fuentes Fernández </h2>
       </div>
-      <div role="presentation" onClick={handleClick} style={{  margin: '0 auto',  }}>
-        <Breadcrumbs aria-label="breadcrumb" style={{  margin: '0 auto' }}>
+
+
+      <div role="presentation" onClick={handleClick} style={{position: 'absolute', top: '43%', left: "20%" }}>
+        <Breadcrumbs aria-label="breadcrumb">
           <Link underline="hover" color="inherit" href="#home">
             Home
           </Link>
@@ -29,6 +32,11 @@ export default function BasicBreadcrumbs() {
           <Typography sx={{ color: 'text.primary' }}>Breadcrumbs</Typography>
         </Breadcrumbs>
       </div>
+      <div style={{ position: 'absolute', left: "85%", top: '25%'}}>
+        <p style={{ }}>⚠️ Very WIP website!!! ⚠️</p>
+      </div>
+
+
     </div>
   );
 }

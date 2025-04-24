@@ -1,3 +1,4 @@
+import React from 'react'
 import './App.css';
 import Footer from './components/Footer.jsx'
 import NavBar from './components/NavBar.jsx';
@@ -18,7 +19,7 @@ function App() {
             left: '3rem', 
             padding: '1rem',
             
-            backgroundColor: 'rgba(0,0,0,0.5)',
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
             borderRadius: '12px',
             fontSize: '2rem',
             fontFamily: 'monospace',
