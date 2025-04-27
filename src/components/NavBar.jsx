@@ -11,9 +11,9 @@ function handleClick(event) {
 export default function BasicBreadcrumbs() {
   return (
     <footer className="h-16 relative flex flex-row justify-center xl:items-baseline items-center ites backdrop-blur-xl bg-[rgba(39,42,44,0.60)]">
-     
+
       <p className="p-4 xl:text-2xl text-[1rem] font-mono order-1 inline-block font-semibold whitespace-nowrap" style={{ color: '#ffffff' }}> Ángel Fuentes Fernández </p>
-      
+
       {/* <div role="presentation" onClick={handleClick} style={{ color: '#ffffff' }} className="p-4 order-2">
         <Breadcrumbs aria-label="breadcrumb" style={{ color: '#ffffff' }}>
           <Link underline="hover" color='#ffffff' href="#home">
