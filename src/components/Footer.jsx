@@ -22,9 +22,9 @@ export default function Footer() {
                 <div
                     className="flex justify-center items-center absolute left-2  transform gap-2 order-1"
                     id="webring-wrapper" >
-                    <a href="https://webring.hackclub.com/" id="previousBtn" class="webring-anchor" title="Previous">‹</a>
-                    <a href="https://webring.hackclub.com/" class="webring-logo" title="Hack Club Webring" alt="Hack Club Webring"></a>
-                    <a href="https://webring.hackclub.com/" id="nextBtn" class="webring-anchor" title="Next">›</a>
+                    <a href="https://webring.hackclub.com/" id="previousBtn" className="webring-anchor" title="Previous">‹</a>
+                    <a href="https://webring.hackclub.com/" className="webring-logo" title="Hack Club Webring" alt="Hack Club Webring"></a>
+                    <a href="https://webring.hackclub.com/" id="nextBtn" className="webring-anchor" title="Next">›</a>
 
                 </div>
 
