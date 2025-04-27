@@ -10,12 +10,12 @@ function Moon(props) {
     const { nodes, materials } = useGLTF('assets/3dModels/Moon.glb');
     const myMoon = React.useRef()
     useFrame(({ clock }) => {
-        myMoon.current.rotation.y =  0.01526 * clock.elapsedTime
+        myMoon.current.rotation.y = 0.01526 * clock.elapsedTime
     })
     const moonMaterial = materials['Material.001'];
     moonMaterial.roughness = 1;
     moonMaterial.metalness = 0;
-    
+
     return (
         <group {...props} dispose={null}>
             <mesh
@@ -34,45 +34,57 @@ function Earth(props) {
     const { nodes, materials } = useGLTF('assets/3dModels/Earth.glb');
     const myEarth = React.useRef()
     useFrame(({ clock }) => {
-        myEarth.current.rotation.y =  0.00417 * clock.elapsedTime
+        myEarth.current.rotation.y = 0.00417 * clock.elapsedTime
     })
     const EarthMaterial = materials['Material.001'];
-    EarthMaterial.roughness = 1; 
-    EarthMaterial.metalness = 0; 
+    EarthMaterial.roughness = 1;
+    EarthMaterial.metalness = 0;
     return (
-    <group {...props} dispose={null}>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Sphere.geometry}
-        material={EarthMaterial}
-        position={[-2, 4, -15]}
-        ref={myEarth}
-        materia
-      />
-    </group>
-  )
+        <group {...props} dispose={null}>
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.Sphere.geometry}
+                material={EarthMaterial}
+                position={[-2, 4, -15]}
+                ref={myEarth}
+                materia
+            />
+        </group>
+    )
 }
 
 useGLTF.preload('assets/3dModels/Earth.glb')
 
 
 export default function MoonAndEarth() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    
+    useEffect(() => {
+        if (window.innerWidth <= 768) {
+            setIsMobile(true);  
+        }
+    }, []);
+
+    if (isMobile) {
+        return null;
+    }
     return (
         <div className="absolute right-10 top-40 w-[40rem] h-[40rem]">
 
             <Canvas
                 style={{ background: 'transparent' }}
-                camera={{ position: [0, 0, 4], fov: 36 , far:10000}}
+                camera={{ position: [0, 0, 4], fov: 36, far: 10000 }}
             >
                 <ambientLight intensity={0.5} />
                 <directionalLight position={[5, 5, 5]} intensity={1} />
                 <Suspense fallback={null}>
-                    <Moon  />
-                    <Earth scale={[4, 4, 4]}/>
+                    <Moon />
+                    <Earth scale={[4, 4, 4]} />
                     <Environment preset="night" background={false} />
                 </Suspense>
-                
+
             </Canvas>
         </div>
     );
