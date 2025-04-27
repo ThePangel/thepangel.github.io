@@ -22,7 +22,7 @@ function App() {
               <MoonAndEarth />
             </div>
             <h1 className="xl:pt-45 pt-85 xl:pr-20 pl-12 xl:text-right text-left xl:text-6xl text-2xl font-mono text-white drop-shadow-[0_0_8px_rgba(256,256,256,0.89)]">"The only way to do great work <br></br> is to love what you do." <br></br> — Steve Jobs</h1>
-            <img className="transform-flat p-4 pl-12 xl:w-lg" src="assets/images/logo.png" />        
+            <img className="transform-flat p-4 pl-12 xl:w-lg w-xs" src="assets/images/logo.png" />        
             </section>
 
         </main>
