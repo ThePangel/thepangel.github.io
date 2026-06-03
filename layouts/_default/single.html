@@ -1,24 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class=" bg-[#18181b] no-scrollbar">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{ .Title }}</title>
-	 {{ with (templates.Defer (dict "key" "global")) }}
+
+    {{ with (templates.Defer (dict "key" "global")) }}
     {{ partial "css.html" . }}
-    {{ end }} 
-	
+    {{ end }}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+
+
+
 </head>
-<body>
+<header class="m-auto flex flex-row bg-[#18181b] w-1/2  items-center justify-items-center justify-center p-2">
 
-	<main>
-		<h1>{{ .Title }}</h1>
-		<time>{{ .Date.Format "2006-01-02" }}</time>
-		
-		<article>
-			{{ .Content }}
-		</article>
-	</main>
+    <div class="grid grid-cols-[1fr_auto_1fr_auto_1fr] grid-rows-1 gap-2 content-center">
 
-</body>
+
+        <h1 class="dotgothic pl-0.5 text-right text-white text-3xl"> 天使 </h1>
+        <h1 class="vt323 text-white text-4xl ">|</h1>
+        <h1 class="vt323  text-white text-4xl ">ThePangel</h1>
+        <h1 class="vt323 text-white text-4xl ">|</h1>
+        <h1 class="vt323  text-white text-4xl ">EA4IXU</h1>
+
+
+    </div>
+
+
+
+
+
+</header>
+
+<main class="h-screen w-screen justify-items-center mt-20 bg-[#18181b]">
+    <div class="flex flex-col w-2/4 min-h-4/5 bg-[#2f2f35] rounded-2xl   border-purple-700 border-2 py-3 px-5">
+
+        <div class="grid grid-cols-3 grid-rows-1  flex-col sans-code text-black  text-md  px-6 bg-white mb-5">
+            <span class="text-left">GNU nano 8.4</span>
+            <h1 class="text-center">{{ .Title }}.md</h1>
+            <time class="text-right">[ {{ .Date.Format "2006-01-02" }} ] </time>
+        </div>
+
+
+
+
+        <article class="prose prose-invert max-w-none sans-code
+	prose-h1:text-purple-400 prose-h1:font-bold  prose-h1:pb-1 prose-h1:mb-4
+	prose-h2:text-white prose-h2:font-semibold prose-h2:mt-6 prose-h2:mb-2
+	prose-p:text-zinc-300 prose-p:text-sm prose-p:leading-relaxed prose-p:mb-4
+	prose-a:text-purple-400 prose-a:hover:text-purple-300 
+	prose-li:text-purple-300  prose-ul:space-y-1 prose-ul:mb-4
+	prose-code:bg-zinc-800/60 
+	">
+            {{ .Content }}
+        </article>
+    </div>
+</main>
+
 </html>
