@@ -8,94 +8,146 @@
 
 
 </head>
-<header class="m-auto flex flex-row bg-[#18181b] w-1/2  items-center justify-items-center justify-center p-2">
 
-    <div class="grid grid-cols-[1fr_auto_1fr_auto_1fr] grid-rows-1 gap-2 content-center">
-
-
-        <h1 class="dotgothic pl-0.5 text-right text-white text-3xl"> 天使 </h1>
-        <h1 class="vt323 text-white text-4xl ">|</h1>
-        <h1 class="vt323  text-white text-4xl ">ThePangel</h1>
-        <h1 class="vt323 text-white text-4xl ">|</h1>
-        <h1 class="vt323  text-white text-4xl ">EA4IXU</h1>
+<body class="flex flex-col min-h-screen bg-[#18181b] text-white">
+    <header class="pt-5 relative mx-auto bg-[#18181b] w-1/2   justify-items-center  ">
+        <div class="grid grid-cols-[1fr_auto]  grid-rows-1  items-center">
+            <div class="grid grid-cols-[1fr_auto_1fr_auto_1fr] grid-rows-1 gap-2 content-center">
 
 
-    </div>
+                <h1 class="dotgothic pl-0.5 text-right text-white text-3xl"> 天使 </h1>
+                <h1 class="vt323 text-white text-4xl ">|</h1>
+                <h1 class="vt323  text-white text-4xl ">ThePangel</h1>
+                <h1 class="vt323 text-white text-4xl ">|</h1>
+                <h1 class="vt323  text-white text-4xl ">EA4IXU</h1>
+
+
+            </div>
+            <nav class="absolute right-50      gap-4 sans-code text-sm">
+                <a href="{{ "" | relURL }}" class="text-purple-400 hover:underline">~/home</a>
+
+            </nav>
+        </div>
 
 
 
 
 
-</header>
+    </header>
 
-<main class="bg-[#18181b] text-slate-900 flex justify-center   h-screen ">
-    <div class="relative w-1/3 h-1/3 mt-20">
-        <div class="relative flex  w-full h-full bg-[#2f2f35] rounded-4xl p-5  border-purple-700 border-2 z-10">
+    <main class="bg-[#18181b] text-slate-900 flex flex-col  gap-20 justify-start items-center w-screen h-full ">
+        <div class="relative w-1/3 max-h-1/3 mt-10">
+            <div
+                class="relative flex  w-full h-[33.333333333333336vh] bg-[#2f2f35] rounded-xl py-2 px-5  border-purple-700 border-2 z-10 overflow-y-auto no-scrollbar">
 
-            <ul>
-                <span class="sans-code text-right text-white text-md ">pangel@PanServ:~/posts $ ls</span>
-                <div class="grid grid-cols-[10rem_1fr] gap-4  py-2 ">
-                    <div class="items-center justify-items-center">
-                        <span class="sans-code text-left text-white text-md ">|</span>
-                        <span class="sans-code pl-2 text-left text-white text-md ">LastWriteTime</span>
-                    </div>
-
-                    <span class="sans-code text-left text-white text-md ">Name</span>
-
-
-                </div>
-                {{ range $index, $element := where .Site.RegularPages "Section" "posts" }}
-                <li>
-                    <a href="{{ $element.Permalink }}" class="group grid grid-cols-[10rem_1fr] gap-4
-                         ">
+                <ul>
+                    <span class="sans-code text-right text-white text-md ">pangel@PanServ:~/posts $ ls</span>
+                    <div class="grid grid-cols-[10rem_1fr] gap-4  py-2 ">
                         <div class="items-center justify-items-center">
-                            <span class="sans-code  text-gray-600 text-md ">{{ add $index 1 }}</span>
-                            <span class="pl-2 sans-code  text-white text-md ">[</span>
-                            <span class="sans-code  text-gray-400 text-md "> {{ $element.Date.Format
-                                "2006-01-02"
-                                }}</span>
-                            <span class="sans-code  text-white text-md ">]</span>
+                            <span class="sans-code text-left text-white text-md ">|</span>
+                            <span class="sans-code pl-2 text-left text-white text-md ">LastWriteTime</span>
                         </div>
 
+                        <span class="sans-code text-left text-white text-md ">Name</span>
 
 
-                        <span class="sans-code text-left text-white text-md group-hover:underline ">
-                            {{
-                            $element.Title
-                            }}.md
-                        </span>
+                    </div>
+                    {{ range $index, $element := where .Site.RegularPages "Section" "posts" }}
+                    <li>
+                        <a href="{{ $element.Permalink }}" class="group grid grid-cols-[10rem_1fr] gap-4 pb-2">
+                            <div class="items-center justify-items-center grid grid-cols-[0.5rem_1fr] grid-rows-1">
+                                <span class="sans-code  text-gray-600 text-md ">{{ add $index 1 }}</span>
+                                <div class="mr-2">
+                                    <span class="pl-2 sans-code  text-white text-md ">[</span>
+                                    <span class="sans-code  text-gray-400 text-md "> {{ $element.Date.Format
+                                        "2006-01-02"
+                                        }}</span>
+                                    <span class="sans-code  text-white text-md ">]</span>
+                                </div>
+                            </div>
 
 
-                    </a>
-                </li>
-                {{ else }}
-                <li>No logs found in /content/posts/</li>
-                {{ end }}
-            </ul>
+
+                            <span class="sans-code text-left text-white text-md group-hover:underline ">
+                                {{
+                                $element.Title
+                                }}.md
+                            </span>
+
+
+                        </a>
+                    </li>
+
+                    {{ end }}
+                </ul>
+
+            </div>
+
+
+            <div class="top-0 left-0 absolute w-full h-full bg-purple-700 opacity-50 rounded-4xl p-5 blur-sm z-0"></div>
+            <div
+                class="top-1/15 left-1/20 absolute w-full h-full border-3 border-purple-700 opacity-40  rounded-4xl p-5  z-0 ">
+            </div>
+            <div
+                class="top-2/15 left-2/20 absolute w-full h-full border-3 border-purple-700 opacity-25 rounded-4xl p-5 z-0">
+            </div>
+            <div
+                class="top-1/15 left-1/20 absolute w-full h-full  bg-purple-700 opacity-30  rounded-4xl p-5 blur-md   z-0 ">
+            </div>
+            <div class="top-2/15 left-2/20 absolute w-full h-full bg-purple-700 opacity-15 rounded-4xl blur-md p-5 z-0">
+            </div>
+
+
+
+
         </div>
+        <div class="w-full flex flex-row items-center place-content-center gap-5">
+            <div
+                class="relative flex  w-[35vh] h-[35vh] bg-[#2f2f35] rounded-xl py-2 px-5  border-purple-700 border-2 z-10 overflow-y-auto no-scrollbar mask-cover bg-[url(https://avatars.githubusercontent.com/u/74447121?v=4)]">
 
 
-        <div class="top-0 left-0 absolute w-full h-full bg-purple-700 opacity-50 rounded-4xl p-5 blur-sm z-0"></div>
-        <div
-            class="top-1/15 left-1/20 absolute w-full h-full border-3 border-purple-700 opacity-40  rounded-4xl p-5  z-0 ">
-        </div>
-        <div
-            class="top-2/15 left-2/20 absolute w-full h-full border-3 border-purple-700 opacity-25 rounded-4xl p-5 z-0">
-        </div>
-        <div
-            class="top-1/15 left-1/20 absolute w-full h-full  bg-purple-700 opacity-30  rounded-4xl p-5 blur-md   z-0 ">
-        </div>
-        <div class="top-2/15 left-2/20 absolute w-full h-full bg-purple-700 opacity-15 rounded-4xl blur-md p-5 z-0">
-        </div>
+            </div>
+            <div
+                class="relative flex flex-col gap-4 w-[70vh] h-[45vh] bg-[#2f2f35] rounded-xl p-3  border-purple-700 border-2 z-10  no-scrollbar sans-code text-white text-sm ">
+                <h1 class="text-purple-400 text-3xl ">> whoami_</h1>
+                <p>You can call me ThePangel, Ángel or EA4IXU, I'm 18 and from Spain. </p>
+                <p>
+                    I have been tinkering all my life, and coding since I got my first (and only) PC 6 years ago.
+                    I've made all sort of projects, from a can sized satelite for the CANSAT program, 
+                    to a more simple but usefull (was) free Spotify song downloader, I love working on a bunch 
+                    of diferent things related to my many interest. 
+                </p>
+                <p>
+                    Some of which include:
+                </p>
+                <ul>
+                    <li>Technology and CS (duh)</li>
+                    <li>Mountain Biking</li>
+                    <li>Amateur Radio</li>
+                    <li>Anime</li>
+                    <li>Gundam</li>
+                    <li>Skill Toys (balisong, begleri)</li>
+                </ul>
+                <p>My Languages: Cambridge C1 Level of English; Native (broken) Spanish</p>
+            </div>
 
 
 
-
-    </div>
-
-
+    </main>
+    <footer class="flex flex-col w-full h-7 mt-auto">
 
 
-</main>
+        <span class="mx-auto mb-10 pb-5">© 2026 ThePangel. All rights reserved.</div>
+            <div class="flex flex-row place-content-center pt-5 mx-auto">
+                <a href="https://github.com/thepangel">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"
+                        class="size-10">
+                </a>
+
+
+            </div>
+
+    </footer>
+</body>
 
 </html>
