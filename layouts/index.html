@@ -5,7 +5,8 @@
     {{ with (templates.Defer (dict "key" "global")) }}
     {{ partial "css.html" . }}
     {{ end }}
-
+    <title>ThePangels stuff blog</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
 
 </head>
 
@@ -24,7 +25,7 @@
 
             </div>
             <nav class="absolute right-50      gap-4 sans-code text-sm">
-                <a href="{{ "" | relURL }}" class="text-purple-400 hover:underline">~/home</a>
+                <a href="{{ "" | relURL }}" class="text-purple-400 hover:underline">~/blog</a>
 
             </nav>
         </div>
@@ -134,11 +135,11 @@
 
 
     </main>
-    <footer class="flex flex-col w-full h-7 mt-auto">
+     <footer class="flex flex-col w-full h-7 mt-auto mx-auto">
 
 
-        <span class="mx-auto mb-10 pb-5">© 2026 ThePangel. All rights reserved.</div>
-            <div class="flex flex-row place-content-center pt-5 mx-auto">
+        <span class="mx-auto text-white">© 2026 ThePangel. All rights reserved.</div>
+            <div class="flex flex-row place-content-center pt-5 pb-5">
                 <a href="https://github.com/thepangel">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"
                         class="size-10">
@@ -146,6 +147,7 @@
 
 
             </div>
+        </span>
 
     </footer>
 </body>

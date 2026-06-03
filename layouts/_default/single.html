@@ -10,8 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }}</title>
-
-
+<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
 
 </head>
 <header class="pt-5 m-auto relative  bg-[#18181b] w-1/2  items-center justify-items-center justify-center ">
@@ -28,7 +27,7 @@
 
         </div>
         <nav class="absolute right-50      gap-4 sans-code text-sm">
-            <a href="{{ "" | relURL }}" class="text-purple-400 hover:underline">~/home</a>
+            <a href="{{ "" | relURL }}" class="text-purple-400 hover:underline">~/blog</a>
 
         </nav>
     </div>
@@ -62,6 +61,41 @@
             {{ .Content }}
         </article>
     </div>
+     <footer class="flex flex-col w-full h-7 mt-auto pt-5">
+
+
+        <span class="mx-auto text-white">© 2026 ThePangel. All rights reserved.</div>
+            <div class="flex flex-row place-content-center pt-5 mx-auto">
+                <a href="https://github.com/thepangel">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"
+                        class="size-10">
+                </a>
+
+
+            </div>
+        </span>
+
+    </footer>
+    <div class="w-3/4 p-3 pt-30">
+
+        <script src="https://giscus.app/client.js"
+        data-repo="thepangel/thepangel.github.io"
+        data-repo-id="R_kgDOSvzDfQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOSvzDfc4C-cjQ"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="catppuccin_mocha"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+    </div>
+    
 </main>
 
 </html>
