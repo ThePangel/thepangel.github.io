@@ -1,6 +1,7 @@
 baseURL = 'https://thepangel.github.io'
 locale = 'en-us'
 title = "ThePangel's personal anything blog!"
+disableKinds = ["taxonomy", "term", "section"]
 
 [build]
   [build.buildStats]
