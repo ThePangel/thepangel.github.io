@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ .Title }}</title>
+	 {{ with (templates.Defer (dict "key" "global")) }}
+    {{ partial "css.html" . }}
+    {{ end }} 
+	
+</head>
+<body>
+
+	<main>
+		<h1>{{ .Title }}</h1>
+		<time>{{ .Date.Format "2006-01-02" }}</time>
+		
+		<article>
+			{{ .Content }}
+		</article>
+	</main>
+
+</body>
+</html>

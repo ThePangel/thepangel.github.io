@@ -1,14 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-[#18181b] no-scrollbar">
 
 <head>
     {{ with (templates.Defer (dict "key" "global")) }}
     {{ partial "css.html" . }}
     {{ end }}
+    
+
 </head>
+<header class="m-auto flex flex-col bg-[#18181b] w-1/2  items-center justify-items-center justify-center p-2">
 
-<body class="bg-gray-600 text-slate-900 flex min-h-screen flex-col items-center justify-center">
+    <div class="grid grid-cols-[1fr_auto_1fr] grid-rows-1 gap-2 content-center">
+        <h1 class="vt323  text-right text-white text-4xl ">ThePangel</h1>
 
-</body>
+
+        <h1 class="vt323 text-white text-4xl ">|</h1>
+
+
+        <h1 class="dotgothic pl-0.5 text-left text-white text-3xl"> 天使 </h1>
+
+    </div>
+
+
+
+
+
+</header>
+
+<main class="bg-[#18181b] text-slate-900 flex items-center justify-center h-screen ">
+    <div class="flex w-1/3 h-2/3 bg-[#3e3e46] rounded-4xl p-5  border-purple-700 border-2">
+    
+        <ul>
+            {{ range where .Site.RegularPages "Section" "posts" }}
+            <li>
+                <a href="{{ .Permalink }}">
+                    <span class="vt323  text-right text-white text-4xl">{{ .Title }}</span>
+                    <span>{{ .Date.Format "2006-01-02" }}</span>
+                </a>
+            </li>
+            {{ else }}
+            <li>No logs found in /content/posts/</li>
+            {{ end }}
+        </ul>
+    </div>
+    
+    
+</main>
 
 </html>
