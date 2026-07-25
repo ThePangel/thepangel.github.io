@@ -19,6 +19,15 @@ hugo new content ./path
 ```
 When you have finished writing, set ``draft: false`` and run ``hugo`` to generate the updated static site
 
+# Deployment
+
+use 
+```bash
+hugo deploy
+```
+to deploy to a connected service like AWS.
+
+To host through github pages like I do myself just install the Hugo GH Action and push the project files (always verify everything seems correct locally before pushing) and enable GH pages
 # Looks
 
 I used my favorite color, purple, and dark gray for the site colors. (my second favorite color, black, was to harsh so I opted for this lighter shade).
