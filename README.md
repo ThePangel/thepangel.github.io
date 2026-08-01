@@ -28,6 +28,8 @@ hugo deploy
 to deploy to a connected service like AWS.
 
 To host through github pages like I do myself just install the Hugo GH Action and push the project files (always verify everything seems correct locally before pushing) and enable GH pages
+
+Hugo's oficial documentation on the matter [here](https://gohugo.io/host-and-deploy/host-on-github-pages/)
 # Looks
 
 I used my favorite color, purple, and dark gray for the site colors. (my second favorite color, black, was to harsh so I opted for this lighter shade).
